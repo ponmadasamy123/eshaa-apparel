@@ -1,0 +1,534 @@
+html {
+  font-size: 16px;
+  font-family: 'Inria Sans', sans-serif;
+  
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.titleBar {
+  /* position: fixed; */
+  /* top:0; */
+  /* width: inherit; */
+  /* z-index: 1000; */
+  background-color:  rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.navbar {font-size: 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Adjust the z-index as needed to ensure it appears above other elements */
+  background-color: transparent; /* Set background color as needed */
+}
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 20%; /* You can adjust the percentage as needed */
+}
+
+.titleBar > .navbar {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.titleBar > .navbar a {
+  color: blue;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+.titleBar > .navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.titleBar > .navbar .icon {
+  display: none;
+}
+.dropdown {
+  display: inline-block;
+}
+
+.dropbtn {
+  font-size: 2rem;  
+  border: none;
+  outline: none;
+  color: blue;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ddd;
+}
+@media screen and (max-width: 600px) {
+  .titleBar > .navbar a:not(:first-child) {
+      display: none;
+  }
+
+  .titleBar > .navbar a.icon {
+      float: right;
+      display: block;
+      order: -1;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .titleBar > .navbar.responsive {
+    flex-direction: row; /* Change to row for horizontal layout */
+    justify-content: space-around; /* Distribute items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+
+  .titleBar > .navbar a {
+    display: block;
+    text-align: center; /* Center text in the horizontal layout */
+    width: 100%; /* Make each link take the full width */
+    padding: 10px 0; /* Add vertical padding for better touch interactions */
+  }
+
+  .titleBar > .navbar a.icon {
+    order: 0; /* Move the icon to the left in the horizontal layout */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .titleBar > .navbar.responsive {
+    flex-direction: column; /* Display items vertically */
+    align-items: flex-start; /* Align items to the start of the column */
+  }
+
+  .titleBar > .navbar a {
+    display: block;
+    text-align: left; /* Align text to the left in the vertical layout */
+  }
+
+  .titleBar > .navbar a.icon {
+    order: 0; /* Move the icon to the top in the vertical layout */
+  }
+}
+/* body {
+  padding-top: 60px; 
+} */
+/* Add new styles for about section layout */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-section {
+  width: 50%; /* Adjust the width as needed */
+}
+
+.image-section {
+  width: 40%; /* Adjust the width as needed */
+}
+
+.image-section img {
+  width: 100%; /* Make the image responsive */
+  max-width: 100%; /* Set maximum width to prevent it from stretching */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for mobile view */
+@media (max-width: 767px) {
+  .about {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items in the column */
+  }
+
+  .content-section,
+  .image-section {
+    width: 100%; /* Full width in mobile view */
+    margin-bottom: 1rem; /* Adjust margin for spacing in mobile view */
+  }
+}
+
+/* .about{
+    padding: 0 2rem;
+} */
+h2{
+    text-align: center;
+    letter-spacing: 6px;
+
+}
+/* Your existing styles */
+.client {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  /* background-image: url("./assets/priscilla-du-preez-dlxLGIy-2VU-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  width: 100%;
+  position: relative;
+  height: 80vh;
+  /* padding: 6vh 10vh 20vh 6vh; */
+}
+
+.client-info {
+  width: 100%;
+  font-weight: bold;
+  color: #000;
+  text-align: left; /* Align text to the left within the client-info container */
+}
+
+.client-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+}
+
+.client-wrapper > .emptyclassforspacing {
+  width: 70%; /* Adjust the width as needed */
+  height: auto;
+}
+
+.client-wrapper > .emptyclassforspacing img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.products{
+    text-align: center;
+}
+
+.departments {
+  text-align: center;
+  /* background-image: url('./assets/background_Departments_image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; */
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  padding-top: 5px;
+}
+
+.dep-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dep-content div {
+  flex: 1;
+  margin: 1rem;
+}
+
+.dep-content img {
+  max-height: 96px;
+  width: auto;
+  border: 2px solid black;
+  padding: 2px;
+}
+
+@media (max-width: 767px) {
+  .dep-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items in the column */
+  }
+
+  .dep-content div {
+    margin: 1rem 0; /* Adjust margin for spacing in mobile view */
+  }
+
+  .departments {
+    margin-top: 15px;
+    height: auto; /* Set height to auto to allow content to determine height */
+    background-size: cover; /* Adjust background size as needed */
+    padding: 20px; /* Add padding to the section */
+    box-sizing: border-box; /* Include padding in the total height and width */
+  }
+}
+
+
+
+#contact {
+  width: 100%;
+  height: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  /* font: 300 60px 'Oswald', sans-serif; */
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+  /*float: left;*/
+  max-width: 400px;
+  font-family: 'Lato';
+  font-weight: 400;
+}
+
+.form-control, 
+textarea {
+  max-width: 400px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-media-list li a {
+  color: #fff;
+}
+
+.social-media-list li {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list li:hover {
+  background-color: #fff; 
+}
+
+.social-media-list li:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255,255,255,.6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  /* .direct-contact-container, .form-horizontal {
+    margin: 0 auto;
+  }   */
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }    
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }  
+  .form-control, textarea {
+    
+    margin: 0 auto;
+  }
+ 
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }  
+  .social-media-list {
+    left: 0;
+  }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+  
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+}

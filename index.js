@@ -24,32 +24,15 @@ function scrollToSection(sectionId) {
 
   // Function to redirect to department details page
   function redirectToDepartment(departmentId) {
-    window.location.href = `department_details.html?departmentId=${departmentId}`;
+    window.location.href = `components/departments/department_details.html?departmentId=${departmentId}`;
   }
-  document.getElementById('myForm').addEventListener('submit', function (event) {
-  event.preventDefault(); // Prevent the form from submitting traditionally
 
-  // Collect form data
-  const formData = new FormData(event.target);
-
-  // Convert form data to JSON
-  const jsonData = {};
-  formData.forEach((value, key) => {
-    jsonData[key] = value;
-  });
-
-  // Send data to the server
-  fetch('/submit_form', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(jsonData),
-  });
-
-  // Optionally, provide feedback to the user
-  alert('Form submitted successfully!');
-});
+  function clearFormFields() {
+    // Reset the form fields after the button is clicked
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+  }
 
 function redirectToMachinaries (){
     window.location.href = `machinary.html`
