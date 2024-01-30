@@ -3,9 +3,9 @@
     z-index: 100;
     opacity: 80%;
 }
-#about, #products #contact{
+/* #about, #products #contact{
     padding-top: 3vh;
-}
+} */
 .slides {
     position: relative;
     width: 100%;
