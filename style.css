@@ -3,8 +3,8 @@
     z-index: 100;
     opacity: 80%;
 }
-/* #about, #products #contact{
-    padding-top: 3vh;
+/* #about, #client, #products, #contact{
+    margin-top: 3vh;
 } */
 
 #about{
@@ -59,4 +59,26 @@
         width: calc(100% / 3); /* Show 3 items in a row */
         max-width: 300px; /* Adjust the max-width as needed */
     }
+}
+
+@media only screen and (min-width:768px){
+    .md\:py-12{
+        padding-top: 7rem;
+        padding-bottom: 2rem;
+    }
+    #contact{
+        padding-top: 4rem;
+    }
+    /* .md\:px-12{
+        margin-top: 8rem;
+    } */
+}
+@media (min-width: 640px){
+.sm\:pt-20 {
+    padding-top: 6rem;
+}
+.pt-16 {
+    padding-top: 6rem;
+}
+
 }

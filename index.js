@@ -37,3 +37,6 @@ function scrollToSection(sectionId) {
 function redirectToMachinaries (){
     window.location.href = `machinary.html`
 }
+function redirectToAboutPage (){
+  window.location.href = `about.html`
+}
